@@ -1,0 +1,19 @@
+git config --global user.name "LOliver92" ---> felhasználónév beállítása
+
+git config --global user.email "loveoliver92@gmail.com" --> email cím beállítása
+
+pwd --> aktuális hely megnézése
+
+cd --> másik mappába való navigálás
+
+git clone https://... --->git clonozása (a link a repostory linkje GitHub-ról)
+
+git status ---> helyiés távoli repó közti különbséget mutatja meg
+
+git add valami.php szamting.html... ---> egy fájl feltöltése
+
+git add --all ---> mindennek, ami a mappában van felöltése
+
+gitcomit -m "ide jöhet bármilyen szöveg" ---> git commitolása " " közti résza message, ami lényegében összefoglalja mi történt
+
+git push ---> a helyi repót a távoli repóba feltölteni pusholni

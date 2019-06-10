@@ -1,0 +1,7 @@
+1. PHP nyelven
+MVC szerkezet--> Model View Control (mindenképp olyat, ahol reg van meg sign up)
+Adatbázisban vannak az adatok
+
+Bootstrapp templates --->free css.com
+
+ER diagramm (relációs séma)
