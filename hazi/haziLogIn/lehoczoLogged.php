@@ -4,7 +4,8 @@
         header('location:lehoczoIndex.php');
         exit();
     }
-    print $_SESSION['userdata']['username'];
+    print ($_SESSION['userdata']['username'] . '<br>');
+    print ('Regisztráció időpontja: ' . $_SESSION ['userdata']['regTime'] . '<br>');
 ?>
 <html>
     <head>

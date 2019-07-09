@@ -66,10 +66,11 @@
             $pw = sha1($pw);
             $firstname = mysqli_real_escape_string($db, $_POST['firstname']);
             $surename = mysqli_real_escape_string($db, $_POST['surename']);
+            
             //$birthdate = mysqli_real_escape_string($db, $_POST['birthdate']);
             
             //$sqlReg = 'INSERT INTO login (id, username, email, password, firstname, surename) ' . 'VALUES (NULL '$user'","'.$email.'","'.sha1($pw).'","'.$firstname.'","'.$surename.'")';
-            $sqlReg = "INSERT INTO login (username, email, password, firstname, surename) " . "VALUES ('$user', '$email', '$pw', '$firstname', '$surename')"; 
+            $sqlReg = "INSERT INTO login (username, email, password, firstname, surename, regTime) " . "VALUES ('$user', '$email', '$pw', '$firstname', '$surename', NOW())"; 
             $resultReg = mysqli_query($db, $sqlReg);
             if ($resultReg == TRUE){
                 print ('Sikeres regisztráció! :D');
@@ -100,6 +101,7 @@
             Vezetéknév: <input type="text" name="surename"><br>
             <input type="submit" name="submit" value="Regisztráció"><br>
         </form>
+        <a href="lehoczoIndex.php">Bejelentkezés</a>
     </body>
 </html>
 
