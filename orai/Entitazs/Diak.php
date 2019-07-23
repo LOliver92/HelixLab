@@ -95,7 +95,7 @@ class Diak {
          $d->close();   
         }
         
-        //update diak
+        //Update diak
         public function updateNev($nev) {
             //Database példányosítása, ez által kapcsolat létrehozás.
             $d = new Database();
@@ -116,6 +116,143 @@ class Diak {
             //lezárjuk a kapcsolatot
             $d->close();
         }
+        
+        //Delete diák
+        public static function deleteDiakById ($id){
+            //Database példányosítása, ez által kapcsolat létrehozás.
+            $d = new Database();
+            $conn = $d->getConn(); //$conn-ban lesz a mysqli_connect függvényünk, ezt használjuk
+            mysqli_set_charset($conn, 'utf8');
+            
+            $sql = 'CALL deleteDiakById ("'.$id.'")';
+            
+            $result = mysqli_query($conn, $sql);
+            
+            if($result){
+                print 'Sikeresen törölted a rendszerből';
+            }
+            else {
+                print 'Sikertelen törlés';
+            }
+            
+            
+            $sql= NULL;
+            $result = NULL;
+            //lezárjuk a kapcsolatot
+            $d->close();
+        }
+        public static function updateAll($id, $nev, $kor, $osztaly) {
+            //Database példányosítása, ez által kapcsolat létrehozás.
+            $d = new Database();
+            $conn = $d->getConn(); //$conn-ban lesz a mysqli_connect függvényünk, ezt használjuk
+            mysqli_set_charset($conn, 'utf8');
+            
+            $sql = 'UPDATE diak SET nev ="'.$nev.'", kor = "'.$kor.'", osztaly = "'.$osztaly.'" WHERE id = "'.$id.'"';
+            $result = mysqli_query($conn, $sql);
+            if($result){
+                print 'Sikeresen ápdételted a tanuló minden adatát';
+            }
+            else {
+                print 'Sikertelen ápdét';
+            }
+            
+            /*if (empty($nev)){
+                $sql = 'UPDATE diak SET kor = "'.$kor.'", osztaly = "'.$osztaly.'" WHERE id = "'.$id.'"';
+                $result = mysqli_query($conn, $sql);
+                
+                if($result){
+                    print 'Sikeresen ápdételted a tanuló korát és osztályát';
+                }
+                else {
+                    print 'Sikertelen ápdét';
+                }
+            }
+            else if (empty($kor)){
+                $sql = 'UPDATE diak SET nev ="'.$nev.'", osztaly = "'.$osztaly.'" WHERE id = "'.$id.'"';
+                $result = mysqli_query($conn, $sql);
+                
+                if($result){
+                    print 'Sikeresen ápdételted a tanuló nevét és osztályát';
+                }
+                else {
+                    print 'Sikertelen ápdét';
+                }
+            }
+            else if (empty($osztaly)){
+                $sql = 'UPDATE diak SET nev ="'.$nev.'", kor = "'.$kor.'", WHERE id = "'.$id.'"';
+                $result = mysqli_query($conn, $sql);
+                
+                if($result){
+                    print 'Sikeresen ápdételted a tanuló nevét és korát';
+                }
+                else {
+                    print 'Sikertelen ápdét';
+                }
+            }
+            else if (empty($nev)&& empty ($kor)){
+                $sql = 'UPDATE diak SET osztaly = "'.$osztaly.'" WHERE id = "'.$id.'"';
+                $result = mysqli_query($conn, $sql);
+                
+                if($result){
+                    print 'Sikeresen ápdételted a tanuló osztályát';
+                }
+                else {
+                    print 'Sikertelen ápdét';
+                }
+            }
+            else if (empty($nev)&& empty ($osztaly)){
+                $sql = 'UPDATE diak SET kor = "'.$kor.'" WHERE id = "'.$id.'"';
+                $result = mysqli_query($conn, $sql);
+                
+                if($result){
+                    print 'Sikeresen ápdételted a tanuló korát';
+                }
+                else {
+                    print 'Sikertelen ápdét';
+                }
+            }
+            else if (empty($kor)&& empty ($osztaly)){
+                $sql = 'UPDATE diak SET nev ="'.$nev.'" WHERE id = "'.$id.'"';
+                $result = mysqli_query($conn, $sql);
+                
+                if($result){
+                    print 'Sikeresen ápdételted a tanuló nevét';
+                }
+                else {
+                    print 'Sikertelen ápdét';
+                }
+                
+            }
+            else if (empty($id)){
+                print "Üres az Id";
+            }
+            else {
+                print "Valami hiba történt";
+            }*/
+            $d->close();
+            }
+            
+        public static function getAllDiak() {
+            //Database példányosítása, ez által kapcsolat létrehozás.
+            $d = new Database();
+            $conn = $d->getConn(); //$conn-ban lesz a mysqli_connect függvényünk, ezt használjuk
+            mysqli_set_charset($conn, 'utf8');
+            
+            $sql = 'CALL getAllDiak';
+            $result = mysqli_query($conn, $sql);
+            
+            if (mysqli_num_rows($result)>0){
+                $ketDTomb = array();
+                while($row = mysqli_fetch_object($result)){
+                    $ketDTomb[] = $row;
+                
+                }
+                print_r ($ketDTomb);
+            }
+            
+            
+            $d->close();
+        }    
         
 }
 ?>
