@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<user_info><users><item0>
+    <id>1</id>
+    <name>Peti</name>
+    <lakhely>Pest</lakhely>
+</item0>
+<item1>
+    <id>2</id>
+    <name>Kitti</name>
+    <lakhely>Pécs</lakhely>
+</item1>
+<item2>
+    <id>3</id>
+    <name>Attila</name>
+    <lakhely>Miskolc</lakhely>
+</item2>
+<item3>
+    <id>4</id>
+    <name>Zsolt</name>
+    <lakhely>Tatabánya</lakhely>
+</item3>
+</users>
+</user_info>

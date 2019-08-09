@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<konyv>
+    <tetel>
+        <kategoria>Szakácskönyv</kategoria>
+        <cim>15 perces kaják</cim>
+        <iro>Jamie Oliver</iro>
+        <megjelenes>2016</megjelenes>
+        <ar>6999</ar>
+    </tetel>
+    
+    <tetel>
+        <kategoria>Próza</kategoria>
+        <cim>Addig se iszik</cim>
+        <iro>Bödőcs Tibor</iro>
+        <megjelenes>2017</megjelenes>
+        <ar>2999</ar>
+    </tetel>
+    
+    <tetel>
+        <kategoria>Próza</kategoria>
+        <cim>Margaret Atwood</cim>
+        <iro>Alias Grace</iro>
+        <megjelenes>2017</megjelenes>
+        <ar>4490</ar>
+    </tetel>
+    
+</konyv>
