@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>My results</title>
+        <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Oswald:300&display=swap" rel="stylesheet">
+        <meta name="description" content="[ultimatebikejournal]" charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="CSS/ResultStyleView.css">
+        <meta name="viewport" content="width=device-width">
+        <script src="../JS/MyResultView.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body onload="getAllMyResults()">
+        <div class="topnav">
+            <a class="first" href="LoggedView.html" target="_self">Back to the Main Page</a>
+            <a class="first" href="AllResultsView.html" target="_self">All Results</a>
+            <div class="dropdown">
+              <div class="dropbtn">Record an activity
+                
+              </div>
+              <div class="dropdown-content">
+                <a href="CyclingView.html">Cycling</a>
+                <a href="RunView.html">Running</a>
+                <a href="SwimView.html">Swimming</a>
+              </div>
+            </div>
+            <div class="clock" id="clock"></div>
+        </div>
+        <div class="titlebox">
+            <div class="title">The Ultimate Bike Journal</div>
+            </div>
+            <div class="mainContainer">
+                <div class="resultContainer">
+                    <h1>Cycling</h1>
+                    <table id="myCyclingResults">
+                    </table>
+                    <div class="totalContainer">Total activity of Cycling <strong id="myTotalCyclingDataDist"></strong><br></div>
+                                                                               
+                    <h1>Running</h1>
+                    <table id="myRunningResults">
+
+                    </table>
+                    <div class="totalContainer">Total activity of Running: <strong id="myTotalRunningData"></strong></div>
+                    <h1>Swimming</h1>
+                    <table id="mySwimmingResults">
+
+                    </table>
+                    <div class="totalContainer">Total activity of Swimming: <strong id="myTotalSwimmingData"></strong></div>
+                </div>
+            </div>
+        
+    </body>
+</html>

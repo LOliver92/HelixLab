@@ -1,0 +1,264 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('bg.jpg') repeat 100% center/cover;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1.5rem;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Gochi Hand', cursive;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: white;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.fa fa-caret-down i {
+    margin-right: 2rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  position: fixed;
+}
+
+.titlebox{
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  background: hsla(100,0%,0%,.5);
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+  margin-top: 4rem;
+  width: 65vW;
+  display: inline-block;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid black;
+  color: greenyellow;
+}
+
+.clock {
+  color: white;
+  float: right;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+   font-size: 17px;
+   margin-top: 1rem;
+   padding-right: .5rem;
+   padding-left: .5rem;
+}
+
+.regcontainer{
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.containereg {
+  background-color: rgba(10, 10, 10, 0.9);
+  width: 60vw;
+  display: inline-block;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+input[type=number]{
+  padding: 6px 6px;
+  margin-top: 8px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  width: 6.25vw;
+  border: none;
+  border-radius: 6px;
+  background-color: #555;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  border: 1px solid #ccc;
+}
+
+input[type=text], [type=password], [type=date], [type=time]{
+  padding: 6px 6px;
+  margin-top: 8px;
+  margin-left: 10px;
+  font-size: 1.5rem;
+  border: none;
+  width: 15vw;
+  border-radius: 6px;
+  background-color: #555;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  border: 1px solid #ccc;
+}
+
+input[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=time]:focus, [type=number]:focus{
+  background-color: gainsboro;
+  color: black;
+  border: 1px solid black;
+}
+
+label{
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+}
+
+button {
+  padding: 6px;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  font-size: 1.5rem;;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button:hover{
+  background-color: gainsboro;
+  color: black;
+  border: 1px solid black;
+}
+
+/* The container */
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: darkgray;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #555;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+h2 {
+  color: white;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 2rem;
+}
+
+p {
+  color: white;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 1.75rem;
+}
+
+h6 {
+  margin-top: .25rem;
+  margin-bottom: .75rem;
+  color: white;
+  font-size: 1.25rem;
+  font-family: 'Oswald', sans-serif;  
+}
+

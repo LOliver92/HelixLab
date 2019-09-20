@@ -1,0 +1,325 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('bg.jpg') repeat 100% center/cover;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1.5rem;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Gochi Hand', cursive;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: white;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.fa fa-caret-down i {
+    margin-right: 2rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  position: fixed;
+}
+
+.titlebox{
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  background: hsla(100,0%,0%,.5);
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+  margin-top: 4rem;
+  width: 65vW;
+  display: inline-block;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid black;
+  color: greenyellow;
+}
+
+.clock {
+  color: white;
+  float: right;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+   font-size: 17px;
+   margin-top: 1rem;
+   padding-right: .5rem;
+   padding-left: .5rem;
+}
+
+.regcontainer{
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.containereg {
+  background-color: rgba(10, 10, 10, 0.9);
+  width: 60vw;
+  display: inline-block;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid black;
+  margin-top: 8px;
+}
+
+h2 {
+  color: white;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 2.75rem;
+}
+
+.uname {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5rem;
+    color: greenyellow;
+    padding: 1rem;
+}
+strong{
+    color: white;
+    font-family: 'Gochi Hand', cursive;
+    font-size: 2.5rem;
+}
+
+.buttonContainer{
+     padding-top: 2rem;
+}
+
+button {
+  padding: 1rem;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  font-size: 1.5rem;;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+button:hover {
+  background-color: gainsboro;
+  color: black;
+  border: 1px solid black;
+}
+
+.changePw:hover {
+  background-color: greenyellow;
+  color: black;
+  border: 1px solid black;
+}
+
+.editProfile:hover{
+  background-color: yellow;
+  color: black;
+  border: 1px solid black;
+}
+
+.deleteProfile:hover{
+  background-color: red;
+  color: black;
+  border: 1px solid black;
+}
+
+.formPopUp{
+    display: none;
+}
+
+
+.alertQuestion{
+    font-family: 'Gochi Hand', cursive;
+    font-size: 3rem;
+    color: red;
+}
+
+.answerYes, .answerNo{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+}
+
+.answerYes {
+    background-color: black;
+    color: red;
+    border: 1px solid red; 
+}
+
+.answerNo {
+    background-color: black;
+    color: greenyellow;
+    border: 1px solid greenyellow; 
+}
+
+.answerYes:hover {
+    background-color: red;
+    color: black;
+    border: 1px solid black; 
+}
+
+.answerNo:hover {
+    background-color: greenyellow;
+    color: black;
+    border: 1px solid black; 
+}
+
+.changePwPopUp{
+    display:none;
+}
+
+.changePwMsg{
+  margin-top: 3rem;  
+  color: white;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 2.5rem;
+}
+
+.inputContainer{
+    text-align: center;
+}
+
+input[type=text], [type=password], [type=date], [type=email] {
+  padding: .5rem;
+  margin-right: 1.5rem;
+  margin-top: 8px;
+  font-size: 1.5rem;
+  border: none;
+  width: 15vw;
+  border-radius: 6px;
+  background-color: #555;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  border: 1px solid #ccc;
+}
+
+input[type=text]:focus, [type=password]:focus, [type=date]:focus, [type=email]:focus{
+  background-color: gainsboro;
+  color: black;
+  border: 1px solid black;
+}
+
+.passwordMsg {
+    display: none;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: .85rem;
+    text-align: center;
+}
+
+.changePwBtnContainer{
+    width:100%;
+    text-align: center;
+}
+
+.chngPwButton {
+  margin-top: 1.5rem;  
+  padding: 1rem;
+  text-align: center;
+  background-color: #555;
+  color: white;
+  font-size: 1.5rem;;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.chngPwButton:hover {
+  background-color: gainsboro;
+  color: black;
+  border: 1px solid black;
+}
+
+.UserId {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Gochi Hand', cursive;
+    color: greenyellow;
+}
+select {
+    padding: .5rem;
+    margin-top: 1rem;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+    background-color: #555;
+    border: 1px solid white;
+    border-radius: 6px;
+    width: 15vw
+}
+
+.editContainers{
+    width: 100%;
+    padding-top: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.userData {
+    font-family: 'Gochi Hand', cursive;
+    color: greenyellow;
+    font-size: 1.5rem;
+}

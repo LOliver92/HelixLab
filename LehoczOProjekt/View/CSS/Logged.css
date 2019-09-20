@@ -1,0 +1,144 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url('bg.jpg') no-repeat 100% center/cover;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Gochi Hand', cursive;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1.5rem;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Gochi Hand', cursive;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: white;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.fa fa-caret-down i {
+    margin-right: 2rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  position: fixed;
+}
+
+.clock {
+  color: white;
+  float: right;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+   font-size: 17px;
+   margin-top: 1rem;
+   padding-right: .5rem;
+   padding-left: .5rem;
+}
+
+.rightContainer{
+  padding-right: .05rem;
+  display: block;
+  float: right;
+}
+
+.logoutLink a{
+    text-align: center;
+    float: right;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    color: greenyellow;
+    background-color: #333;
+}
+.logoutLink a:hover{
+    color: red;
+    background-color: #333;
+}
+
+.titlebox{
+  display: block;
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.title {
+  background: hsla(100,0%,0%,.5);
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.5rem;
+  margin-top: 4rem;
+  width: 65vW;
+  display: inline-block;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid black;
+  color: greenyellow;
+}
+
+p {
+  font-family: 'Oswald', sans-serif;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+img {
+  width: 100%;
+}
+h1 {
+  font-family: 'Gochi Hand', cursive;
+  text-align: center;
+}
+h2 {
+ font-family: 'Gochi Hand', cursive;
+  margin-left: .5rem;
+}

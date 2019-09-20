@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Oswald:300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/RecordOfAct.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="../JS/CyclingView.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>Record an activity</title>
+    </head>
+    <body onload="Clock()">
+        <div class="navbar">
+            <a class="first" href="LoggedView.html" target="_self">Back to the Main Page</a>
+            <a href="MyResultView.html" target="_self">My results</a>
+            <a href="AllResultsView.html">All results</a>
+            <div class="dropdown">
+              <div class="dropbtn">Record an activity
+              </div>
+              <div class="dropdown-content">
+                <a href="RunView.html">Running</a>
+                <a href="SwimView.html">Swimming</a>
+              </div>
+            </div>
+            <div class="clock" id="clock"></div>
+        </div>
+         <div class="titlebox">
+            <div class="title">The Ultimate Bike Journal</div>
+            </div>
+        <br>
+        <div class="regcontainer">
+            <div class="containereg">
+                <h2>Record a Cycling activity</h2>
+                <label>Distance Of Activity: </label><input type="number" id="numLongOfActKm" placeholder="Km"><input type="number" id="numLongOfActM" placeholder="m"><br>
+                <label>Time of Activity:  </label><input type="time" id="timeOfAct"><br>
+                <label>Date of Activity:  </label><input type="date" id="dateOfAct"><br><br><br>
+                <button id="btnNewAccount" onclick="recordNewAct()">Record</button><br><br>
+            </div>
+        </div>
+    </body>
+</html>

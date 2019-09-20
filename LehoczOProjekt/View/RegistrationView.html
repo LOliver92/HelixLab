@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Gochi+Hand|Oswald:300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/Registration.css">
+        <meta name="description" content="[ultimatebikejournal]" charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <script src="../JS/RegistrationView.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <title>Registration</title>
+    </head>
+    <body onload="Clock()">
+        <div class="topnav">
+            <a class="first" href="MainPageView.html" target="_self">Back to the Main Page</a>
+            <div class="clock" id="clock"></div>
+        </div>
+         <div class="titlebox">
+            <div class="title">The Ultimate Bike Journal</div>
+            </div>
+        <br>
+        <div class="regcontainer">
+            <div class="containereg">
+                <h2>Registration for Bike Journal</h2>
+                <div id="newAccount">
+                    <input type="text" name="userRegName" id="userRegName" placeholder="username" onclick="hidepasswordMsg()"><br>
+                    <input type="password" name="passwordReg" id="passwordReg" placeholder="password" onclick="showpasswordMsg()"><br>
+                    <p class="passwordMsg" id="pwMsg">The password has to be between 8-20 characters</p>
+                    <input type="password" name="passwordReg2" id="passwordReg2" placeholder="password again"><br>
+                    <input type="email" name="email" id="email" placeholder="e-mail" onclick="hidepasswordMsg()"><br>
+                    <input type="text" name="firstname" id="firstname" placeholder="firstname" onclick="hidepasswordMsg()"><br>
+                    <input type="text" name="surename" id="surename" placeholder="surename" onclick="hidepasswordMsg()"><br>
+                    <input type="date" name="birthdate" id="birthdate" onclick="hidepasswordMsg()"><br>
+                    <p>Select your gender:</p>
+                    <label class="container"><input type="radio" name="gender" id="genderMale" value="male"><span class="checkmark"></span></label><h6>Male</h6><br>
+                    <label class="container"><input type="radio" name="gender" id="genderFemale" value="female"><span class="checkmark"></span></label><h6>Female</h6><br>
+                    <label class="container"><input type="radio" name="gender" id="genderOther" value="other"><span class="checkmark"></span></label><h6>Other</h6><br><br>
+                    <button id="btnNewAccount" onclick="createNewAccount()">Registrtation</button><br><br>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
