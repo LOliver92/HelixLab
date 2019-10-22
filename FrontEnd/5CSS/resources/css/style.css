@@ -1,0 +1,132 @@
+/* DEFAULT BELLÍTÁSOK */
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+/* NAV BELLÍTÁSOK */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .85)) ,url('./css_img/road.jpg');
+    height: 100vh;
+    background-position: center;
+    /* Mobil nézeten át kell állítani */
+    background-size: cover;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 12px 0;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    padding: 7px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e23;
+    transition: .3s;
+}
+
+/* HEADING */
+
+.hero-text-box {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+@media only screen and (max-width: 870px){
+    .hero-text-box {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 730px){
+    .hero-text-box {
+        font-size: 60%;
+        top: 58%;
+    }
+
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        font-size: 70%;
+    }   
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    color: #fff;
+    font-weight: 300;
+    font-size: 260%;
+}
+
+/* BUTTONS */
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    color: #fff;
+    padding: 15px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px; 
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e23;
+    border: 1px solid #e67e23;
+    margin-right: 15px;
+}
+
+.btn-full:hover,
+.btn-full:active {
+    background-color: #cb6105;
+    border: 1px solid #cb6105;
+}
+
+.btn-empty:link,
+.btn-empty:visited {
+    border: 1px solid #e67e23;
+    color: #e67e23;
+}
+
+
+.btn-empty:hover,
+.btn-empty:active {
+    color: #fff;
+    background-color: #cb6105;
+    border: 1px solid #cb6105;
+}

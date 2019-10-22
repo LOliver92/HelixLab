@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML2</title>
+    <style>
+        .szegely {
+            border: 1px solid black;
+        }
+
+        td {
+            border: 1px solid black; 
+        }
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <!-- táblázat -->
+    <table>
+        <tr>
+            <td class="szegely">Első sor, első oszlop</td>
+            <td>Első sor, második oszlop</td>
+            <td>Első sor, harmadik oszlop</td>
+        </tr>
+        <tr>
+            <td>Második sor, első oszlop</td>
+            <td>Második sor, második oszlop</td>
+            <td>Második sor, harmadik oszlop</td>
+        </tr>
+        <tr>
+            <td>Harmadik sor, első oszlop</td>
+            <td>Harmadik sor, második oszlop</td>
+            <td>Harmadik sor, harmadik oszlop</td>
+        </tr>
+
+    </table>
+    <br><br>
+    <!-- rowspan -->
+    <table>
+        <tr>
+            <td>Első sor, első oszlop</td>
+            <td rowspan="3">Első sor, második oszlop</td>
+            <td>Első sor, harmadik oszlop</td>
+        </tr>
+        <tr>
+            <td>Második sor, első oszlop</td>
+            <!-- <td>Második sor, második oszlop</td> -->
+            <td>Második sor, harmadik oszlop</td>
+        </tr>
+        <tr>
+            <td>Harmadik sor, első oszlop</td>
+            <!-- <td>Harmadik sor, második oszlop</td> -->
+            <td>Harmadik sor, harmadik oszlop</td>
+        </tr>
+
+    </table>
+    <br><br>
+    <!-- colspan -->
+    <table>
+            <tr>
+                <td>Első sor, első oszlop</td>
+                <td>Első sor, második oszlop</td>
+                <td>Első sor, harmadik oszlop</td>
+            </tr>
+            <tr>
+                <td colspan="3">Második sor, első oszlop</td>
+                <!-- <td>Második sor, második oszlop</td>
+                <td>Második sor, harmadik oszlop</td> -->
+            </tr>
+            <tr>
+                <td>Harmadik sor, első oszlop</td>
+                <td>Harmadik sor, második oszlop</td>
+                <td>Harmadik sor, harmadik oszlop</td>
+            </tr>
+    
+    </table>
+    <br><br>
+
+    <!-- űrlapok -->
+    <form action="valami.php" method="POST" target="_blank">
+        <label for="username">Felhasználónév: </label>
+        <input type="text" placeholder="PÖCSFEJ" name="username" id="username" value="Pistike11"><br>
+        <label for="pw">Jelszó: </label>
+        <input type="password" name="pw" id="pw"><br>
+        <button type="submit">Küldés!</button>
+    </form>
+    <br>
+
+    <!-- checkbox -->
+    <form action="">
+        <label for="">Hamburger</label>
+        <input type="checkbox"><br>
+        <label for="">Pizza</label>
+        <input type="checkbox"><br>
+        <label for="">Gyros</label>
+        <input type="checkbox"><br>
+    </form>
+
+    <form action="">
+        <label for="">Nő</label>
+        <input type="radio" name="gender" checked="checked"><br>
+        <label for="">Férfi</label>
+        <input type="radio" name="gender"><br>
+        <label for="">Egyéb</label>
+        <input type="radio" name="gender"><br>
+    </form>
+
+    <br><br>
+
+    <form>
+        <fieldset>
+            <legend>Személyes információ</legend>
+            <label for="username">Felhasználónév: </label>
+            <input type="text" placeholder="PÖCSFEJ" name="username" id="username" value="Pistike11"><br>
+            <label for="pw">Jelszó: </label>
+            <input type="password" name="pw" id="pw"><br>
+            <button type="submit">Küldés!</button>
+        </fieldset>
+    </form>
+
+    <br><br>
+    <!-- option group -->
+    <form>
+        <label for="kutya">Válasszon kutyát:</label>
+        <select name="doggo" id="kutya">
+            <optgroup label="kistestű kutyák">
+                <option>Spitz</option>
+                <option>Bichon havanese</option>
+            </optgroup>
+            <optgroup label="nagytestű kutyák">
+                <option>labrador</option>
+                <option>német juhász</option>
+            </optgroup>
+            
+            <option selected="selected">- Válasszon kutyát -</option>
+        </select>
+    </form>
+    <br><br>
+    <!-- fájl feltöltés -->
+    <label for="">Fájl kiválasztása</label>
+    <input type="file" name="" id="">
+    <br><br>
+
+    <textarea name="" id="" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae amet perspiciatis consequuntur esse vitae impedit repellendus. Excepturi sint, quod earum perspiciatis maxime, modi minus deserunt animi sequi inventore voluptas nobis?</textarea>
+
+</body>
+</html>
